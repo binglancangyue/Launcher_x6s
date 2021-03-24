@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cywl.launcher.launcher_x6s">
+
+    <application
+        android:name=".MyApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity
+            android:name=".HomeActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|screenSize|keyboardHidden|mcc|mnc"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AppListActivity" />
+        <!--<activity android:name=".TestActivity" />-->
+
+        <!--<receiver android:name="com.cywl.launcher.receiver.AppRemoveAddedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+                <action android:name="android.intent.action.UID_REMOVED" />
+            </intent-filter>
+        </receiver>-->
+        <activity android:name=".TestActivity" />
+        <activity android:name=".EcarTestActivity" />
+
+        <activity
+            android:name="com.henrik.keeplive.onepx.KeepLiveActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":crowdsourcing"
+            android:screenOrientation="portrait"
+            android:windowBackground="@android:color/transparent"
+            android:windowContentOverlay="@null"
+            android:windowIsTranslucent="true" />
+        <!--腾讯网卡activity-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="dd8b286c9ef0d6c4ec4f5213aec88d94" />
+
+        <!--腾讯网卡Service-->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="1494840045" />
+
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="tencentmap_navi,3A4YH-SC4KN-AGXZG-IU4NP-VSXXZ" />
+
+        <meta-data
+            android:name="APPKEY_DENGTA"
+            android:value="0M300OCAVR183RC1" />
+
+        <receiver
+            android:name="com.marswin89.marsdaemon.proc.Receiver1"
+            android:process=":crowdsourcing" />
+
+        <receiver
+            android:name="com.marswin89.marsdaemon.proc.Receiver2"
+            android:process=":crowdsourcing" />
+        <receiver
+            android:name="com.henrik.keeplive.receiver.BootReceiver"
+            android:exported="false"
+            android:process=":crowdsourcing">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_REMOVED" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
+                <action android:name="android.intent.action.MEDIA_SCANNER_STARTED" />
+                <action android:name="android.intent.action.MEDIA_SHARED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.cywl.launcher.MyService" />
+        <service
+            android:name="com.tencent.deviceearn.StarterService"
+            android:exported="true"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.DeviceEarnService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.WecarbaseService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.pluginbase.upgrade.UpgradeService"
+            android:process=":upgrade" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub0"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub1"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub2"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub3"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub4"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub5"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub6"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub7"
+            android:process=":crowdsourcing" />
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub8"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub9"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub10"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub11"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub12"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub13"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub14"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.tencent.libdeviceearn.tracerecord.stub.ServiceStub15"
+            android:process=":crowdsourcing" />
+
+
+        <!--高德定位-->
+        <service
+            android:name="com.tencent.oasis.loader.component.ProxyService"
+            android:process=":crowdsourcing" />
+        <!--同行者语音-->
+        <service
+            android:name="com.marswin89.marsdaemon.proc.GuardService"
+            android:exported="true"
+            android:process=":crowdsourcing" />
+
+        <!-- ************** 腾讯广播 start of KeepLive ************** -->
+        <service
+            android:name="com.marswin89.marsdaemon.proc.GuardService$subService"
+            android:process=":crowdsourcing" />
+
+        <service
+            android:name="com.marswin89.marsdaemon.proc.Service2"
+            android:process=":crowdsourcing" />
+
+        <!--腾讯网卡-->
+        <service
+            android:name="com.henrik.keeplive.schedulerjob.DaemonJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":crowdsourcing" />
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- 灯塔SDK配置，不要修改，统一使用导航APP的灯塔key -->
+        <service
+            android:name="com.txznet.sdk.TXZService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+
+                <!-- {项目包名}.service.TXZService -->
+                <action android:name="com.cywl.launcher.launcher_x6s.service.TXZService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.BIND_WALLPAPER"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ" />
+    <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.SET_TIME"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MASTER_CLEAR"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.STATUS_BAR"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission
+        android:name="android.permission.STATUS_BAR_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.READ_FRAME_BUFFER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.SHUTDOWN"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.ACCESS_MTP"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission
+        android:name="android.permission.STOP_APP_SWITCHES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+
+</manifest>

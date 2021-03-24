@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="100dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="100dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_peiliao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="陪聊" />
+
+        <Button
+            android:id="@+id/btn_Roade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="道路救援" />
+
+        <Button
+            android:id="@+id/btn_Rescue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生命救援" />
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="打电话" />
+
+        <Button
+            android:id="@+id/btn_StartECar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="打开行车SOS" />
+
+        <Button
+            android:id="@+id/btn_Assistant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="事故协助" />
+
+        <Button
+            android:id="@+id/btn_Law_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="违章查询" />
+
+        <Button
+            android:id="@+id/btn_CarTrouble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="故障咨询" />
+
+        <Button
+            android:id="@+id/btn_GoToPrivilegePage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我的特权" />
+
+        <Button
+            android:id="@+id/btn_StartECarRenew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我要续费" />
+
+        <Button
+            android:id="@+id/btn_ACC_ON"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点火" />
+
+        <Button
+            android:id="@+id/btn_ACC_OFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="熄火" />
+
+        <Button
+            android:id="@+id/btn_quake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="震动" />
+
+        <Button
+            android:id="@+id/btn_record_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="抓拍完成" />
+
+        <Button
+            android:id="@+id/btn_write_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="写入数据" />
+    </LinearLayout>
+
+</ScrollView>
